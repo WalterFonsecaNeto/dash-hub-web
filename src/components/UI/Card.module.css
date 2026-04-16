@@ -1,0 +1,35 @@
+.card {
+  padding: 1.05rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid #d7e1ec;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  box-shadow: 0 10px 26px rgba(17, 38, 60, 0.08);
+}
+
+.title {
+  margin: 0;
+  color: #5a6f88;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  margin: 0.5rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #12263a;
+}
+
+.neutral .value {
+  color: #12263a;
+}
+
+.success .value {
+  color: #1f8a70;
+}
+
+.danger .value {
+  color: #d7263d;
+}

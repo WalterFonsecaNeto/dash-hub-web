@@ -1,0 +1,100 @@
+.wrapper {
+  display: flex;
+  align-items: end;
+  gap: 0.55rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.76rem;
+  color: #526984;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.monthControl {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.navButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #cfdae8;
+  border-radius: 11px;
+  background: linear-gradient(180deg, #ffffff, #f4f9ff);
+  color: #1d3b5b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.16s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: #1b8b83;
+  box-shadow: 0 7px 16px rgba(27, 139, 131, 0.16);
+}
+
+.navButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.inputWrap {
+  position: relative;
+  min-width: 0;
+}
+
+.input {
+  width: 180px;
+  border: 1px solid #d1ddea;
+  border-radius: 11px;
+  padding: 0.58rem 0.7rem;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  color: #1d3652;
+  font: inherit;
+  min-height: 42px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #1b8b83;
+  box-shadow: 0 0 0 3px rgba(27, 139, 131, 0.14);
+  background: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .field {
+    flex: 1;
+  }
+
+  .monthControl {
+    width: 100%;
+  }
+
+  .inputWrap {
+    flex: 1;
+  }
+
+  .input {
+    width: 100%;
+  }
+}

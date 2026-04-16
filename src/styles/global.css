@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: #13243a;
+  background-color: #edf2f8;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --surface-1: #ffffff;
+  --surface-2: #f6f9fc;
+  --surface-3: #eef3f8;
+  --stroke-soft: #d8e1ec;
+  --text-strong: #13243a;
+  --text-muted: #5b6f88;
+  --brand-1: #0d5c8c;
+  --brand-2: #1b8b83;
+  --ok: #0f8a67;
+  --danger: #d93b52;
+  --shadow-soft: 0 12px 30px rgba(19, 36, 58, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text-strong);
+  background:
+    radial-gradient(circle at 12% -10%, rgba(13, 92, 140, 0.14) 0%, transparent 35%),
+    radial-gradient(circle at 92% 0%, rgba(27, 139, 131, 0.12) 0%, transparent 32%),
+    linear-gradient(180deg, #f2f6fc 0%, #eaf0f7 100%);
+}
+
+a {
+  color: inherit;
+}
+
+/* Smooth auth route transition between /login and /register */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0.2, 0.75, 0.28, 1);
+}
+
+::view-transition-old(root) {
+  animation-name: authRouteOut;
+}
+
+::view-transition-new(root) {
+  animation-name: authRouteIn;
+}
+
+@keyframes authRouteIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.999);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes authRouteOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-7px) scale(0.999);
+  }
+}

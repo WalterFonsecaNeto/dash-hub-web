@@ -1,0 +1,31 @@
+.wrapper {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.label {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4f6480;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.input {
+  border: 1px solid #d0dbe8;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  background: #ffffff;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  color: #1a314b;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input:focus {
+  border-color: #1b8b83;
+  background: #fbfeff;
+  box-shadow: 0 0 0 3px rgba(27, 139, 131, 0.14);
+}

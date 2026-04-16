@@ -1,0 +1,166 @@
+.page {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+}
+
+.header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.title {
+  margin: 0;
+  color: #12263a;
+}
+
+.description {
+  margin: 0.35rem 0 0;
+  color: #627389;
+}
+
+.topActions {
+  display: flex;
+  align-items: end;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.85rem;
+  border: 1px solid #dce2ea;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.filterField {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.84rem;
+  color: #4d5f7a;
+}
+
+.filterField input {
+  border: 1px solid #ccd2dd;
+  border-radius: 10px;
+  padding: 0.58rem 0.65rem;
+  font: inherit;
+}
+
+.filterActions {
+  display: flex;
+  align-items: end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  margin-top: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  color: #4d5f7a;
+  font-size: 0.9rem;
+}
+
+.tableArea {
+  min-height: 0;
+}
+
+.deleteModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.deleteIconWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.4rem;
+}
+
+.deleteIcon {
+  width: 48px;
+  height: 48px;
+  color: #d7263d;
+  opacity: 0.9;
+}
+
+.deleteModalContent > p:first-of-type {
+  margin: 0;
+  color: #122943;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.deleteModalContent strong {
+  color: #0c5f93;
+  font-weight: 700;
+}
+
+.deleteHint {
+  margin: 0;
+  color: #627a95;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.deleteActions {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  padding-top: 0.8rem;
+  border-top: 1px solid #e7ecf3;
+}
+
+.deleteActions button {
+  min-width: 110px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .filterActions {
+    align-items: stretch;
+  }
+
+  .pagination {
+    justify-content: space-between;
+  }
+
+  .deleteActions {
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 0.5rem;
+  }
+
+  .deleteActions button {
+    width: 100%;
+    min-width: unset;
+  }
+}

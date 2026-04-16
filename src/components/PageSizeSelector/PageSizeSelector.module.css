@@ -1,0 +1,46 @@
+.wrapper {
+	display: grid;
+	gap: 0.3rem;
+}
+
+.label {
+	font-size: 0.76rem;
+	color: #526984;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.select {
+	border: 1px solid #d1ddea;
+	border-radius: 10px;
+	padding: 0.58rem 2.1rem 0.58rem 0.7rem;
+	background: linear-gradient(180deg, #ffffff, #f7fbff);
+	color: #1d3652;
+	font: inherit;
+	min-height: 42px;
+	outline: none;
+	cursor: pointer;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.select:focus {
+	border-color: #1b8b83;
+	background: #fbfeff;
+	box-shadow: 0 0 0 3px rgba(27, 139, 131, 0.14);
+}
+
+.select:disabled {
+	cursor: not-allowed;
+	opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+	.wrapper {
+		width: 100%;
+	}
+
+	.select {
+		width: 100%;
+	}
+}

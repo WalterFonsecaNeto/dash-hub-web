@@ -1,0 +1,54 @@
+.form {
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #506783;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.select {
+  border: 1px solid #d0dbe8;
+  border-radius: 10px;
+  padding: 0.66rem 0.76rem;
+  background: #ffffff;
+  color: #1d3652;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select:focus {
+  border-color: #1b8b83;
+  box-shadow: 0 0 0 3px rgba(27, 139, 131, 0.14);
+}
+
+.gridFields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.actions {
+  margin-top: 0.45rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .gridFields {
+    grid-template-columns: 1fr;
+  }
+}

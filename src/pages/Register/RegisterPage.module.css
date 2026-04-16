@@ -1,0 +1,245 @@
+.page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.1rem;
+  background: linear-gradient(140deg, #063347 0%, #0f5570 45%, #0c6d7d 100%);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(4px);
+  z-index: 0;
+  opacity: 0.72;
+  animation: float 9s ease-in-out infinite;
+}
+
+.orbOne {
+  width: 250px;
+  height: 250px;
+  top: -60px;
+  right: -50px;
+  background: radial-gradient(circle at 30% 30%, rgba(138, 237, 255, 0.58), rgba(60, 112, 196, 0.12));
+}
+
+.orbTwo {
+  width: 230px;
+  height: 230px;
+  left: -50px;
+  top: 20%;
+  background: radial-gradient(circle at 50% 50%, rgba(119, 244, 214, 0.56), rgba(34, 102, 172, 0.12));
+  animation-delay: 1.1s;
+}
+
+.orbThree {
+  width: 330px;
+  height: 330px;
+  bottom: -120px;
+  right: 26%;
+  background: radial-gradient(circle at 50% 50%, rgba(132, 236, 255, 0.4), rgba(22, 58, 126, 0.08));
+  animation-delay: 2s;
+}
+
+.layout {
+  width: min(1040px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 1.2rem;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+.brandPanel {
+  color: #f0f8ff;
+  border: 1px solid rgba(215, 236, 255, 0.2);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(8px);
+  padding: 2.1rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  box-shadow: 0 20px 42px rgba(5, 22, 38, 0.24);
+  animation: revealLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ddf2ff;
+  border: 1px solid rgba(221, 242, 255, 0.46);
+  border-radius: 999px;
+  padding: 0.34rem 0.68rem;
+}
+
+.brandTitle {
+  margin: 0;
+  font-size: clamp(1.72rem, 2.45vw, 2.28rem);
+  line-height: 1.13;
+  letter-spacing: -0.02em;
+}
+
+.brandSubtitle {
+  margin: 0;
+  color: rgba(240, 248, 255, 0.92);
+  line-height: 1.55;
+}
+
+.featureList {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.52rem;
+  color: #ebf6ff;
+  font-weight: 700;
+  font-size: 0.93rem;
+  transform: translateY(6px);
+  opacity: 0;
+  animation: revealUp 0.5s ease forwards;
+}
+
+.featureItem:nth-child(1) {
+  animation-delay: 0.24s;
+}
+
+.featureItem:nth-child(2) {
+  animation-delay: 0.33s;
+}
+
+.featureItem:nth-child(3) {
+  animation-delay: 0.42s;
+}
+
+.formCard {
+  min-width: 0;
+}
+
+.formCard :global(section) {
+  width: 100%;
+  margin: 0;
+  border-radius: 24px;
+  border: 1px solid #d8e8f6;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  box-shadow: 0 22px 42px rgba(5, 22, 38, 0.16);
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden;
+  animation: revealRight 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.formCard :global(section)::before {
+  content: '';
+  position: absolute;
+  inset: -55% auto auto -20%;
+  width: 72%;
+  height: 72%;
+  transform: rotate(16deg);
+  background: linear-gradient(90deg, rgba(22, 126, 172, 0.15), rgba(83, 205, 186, 0));
+  pointer-events: none;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.56rem;
+  color: #102a41;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0.35rem 0 1.05rem;
+  color: #5e718a;
+}
+
+.form {
+  display: grid;
+  gap: 0.82rem;
+}
+
+.linkText {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: #5b6e88;
+}
+
+.linkText a {
+  color: #0c5f93;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.linkText a:hover {
+  color: #1b8b83;
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-12px) translateX(6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .brandPanel {
+    padding: 1.35rem 1.2rem;
+  }
+
+  .orbTwo,
+  .orbThree {
+    display: none;
+  }
+}

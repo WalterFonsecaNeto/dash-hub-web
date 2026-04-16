@@ -1,0 +1,50 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #546b85;
+}
+
+.link {
+  border: 0;
+  background: transparent;
+  color: #0c5f93;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #1b8b83;
+  text-decoration: underline;
+}
+
+.separator {
+  display: inline-flex;
+  align-items: center;
+  color: #c5d3e0;
+  line-height: 1;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.current {
+  font-weight: 600;
+  color: #233952;
+}
+
+@media (max-width: 640px) {
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .link {
+    font-size: 0.85rem;
+  }
+}

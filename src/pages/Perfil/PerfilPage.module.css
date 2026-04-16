@@ -1,0 +1,48 @@
+.header {
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
+  color: #122943;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: #627a95;
+}
+
+.card {
+  border: 1px solid #d8e2ed;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  box-shadow: 0 10px 26px rgba(17, 38, 60, 0.08);
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid #edf2f8;
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.label {
+  color: #5a6f88;
+  font-weight: 700;
+}
+
+.value {
+  color: #152b45;
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
